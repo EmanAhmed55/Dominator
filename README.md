@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dominator Algorithm</title>
+    
 </head>
 <body>
-    <h1>Dominator Algorithm</h1>
+    <h1>Dominator </h1>
     <h2>Problem Description</h2>
     <p>
         Given an array A consisting of N integers, the dominator is defined as the value that occurs in 
