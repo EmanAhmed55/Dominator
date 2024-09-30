@@ -27,7 +27,6 @@
     <p>
         <strong>Output:</strong><br>
         0, 2, 4, 6 or 7
-
     </p>
     <h2>Requirements</h2>
     <ul>
