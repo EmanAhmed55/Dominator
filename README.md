@@ -6,7 +6,7 @@
     
 </head>
 <body>
-    <h1>Project 2: Dominator</h1>
+    <h1> Dominator</h1>
     <h2>Description</h2>
     <p>
         An array A consisting of N integers is given. The dominator of array A is the value that occurs in 
