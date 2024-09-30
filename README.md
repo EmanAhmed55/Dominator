@@ -3,53 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dominator Algorithm</title>
+    <title>Project 2: Dominator</title>
 </head>
 <body>
-    <h1>Dominator Algorithm</h1>
-    
-    <h2>Problem Description</h2>
+    <h1>Project 2: Dominator</h1>
+    <h2>Description</h2>
     <p>
-        Given an array <strong>A</strong> consisting of <strong>N</strong> integers, the dominator is defined as the value that occurs in 
-        more than half of the elements of <strong>A</strong>. The goal is to write an efficient algorithm that returns 
-        the index of any element in array <strong>A</strong> where the dominator occurs. If there is no dominator, 
-        the function should return <code>-1</code>.
+        An array A consisting of N integers is given. The dominator of array A is the value that occurs in 
+        more than half of the elements of A.
     </p>
-    
-    <h2>Input Specifications</h2>
-    <ul>
-        <li><strong>N</strong> is an integer within the range [0..100,000].</li>
-        <li>Each element of array <strong>A</strong> is an integer within the range [−2,147,483,648..2,147,483,647].</li>
-    </ul>
-
     <h2>Example</h2>
-    <h3>Sample Input:</h3>
-    <pre>
-    A[0] = 3 
-    A[1] = 4 
-    A[2] = 3 
-    A[3] = 2 
-    A[4] = 3 
-    A[5] = -1 
-    A[6] = 3 
-    A[7] = 3
-    </pre>
-    
-    <h3>Sample Output:</h3>
-    <pre>0, 2, 4, 6</pre>
-
-    <h2>Algorithm</h2>
     <p>
-        To solve this problem, we can use a hash map to count the occurrences of each number, and 
-        then determine if any number exceeds <strong>N/2</strong> occurrences. This approach allows us to efficiently 
-        identify the dominator, if it exists.
+        <strong>Input:</strong><br>
+        A[0] = 3 <br>
+        A[1] = 4 <br>
+        A[2] = 3 <br>
+        A[3] = 2 <br>
+        A[4] = 3 <br>
+        A[5] = -1 <br>
+        A[6] = 3 <br>
+        A[7] = 3
     </p>
-
+    <p>
+        <strong>Output:</strong><br>
+        0, 2, 4, 6
+    </p>
+    <h2>Requirements</h2>
+    <ul>
+        <li>N is an integer within the range [0..100,000];</li>
+        <li>Each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].</li>
+    </ul>
+    <h2>Functionality</h2>
+    <p>
+        Write an efficient algorithm that returns the index of any element of array A in which the dominator of A occurs.
+        The function should return -1 if array A does not have a dominator.
+    </p>
     <h2>Usage</h2>
     <p>
-        Implement the algorithm in your preferred programming language. Call the function with 
-        the input array to retrieve the result. The function should return the index of any element 
-        where the dominator occurs, or <code>-1</code> if no dominator exists.
+        Call the function with your array to find the index of the dominator.
     </p>
 </body>
 </html>
