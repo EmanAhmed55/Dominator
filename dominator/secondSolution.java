@@ -1,12 +1,14 @@
-
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
-public class secondSolution {
+public class SecondSolution {
 
-    public static int findDominator(int[] A) {
+    public static List<Integer> findDominator(int[] A) {
         int n = A.length;
+        List<Integer> indices = new ArrayList<>();
         if (n == 0) {
-            return -1;
+            return indices; // Return an empty list if no dominator
         }
 
         HashMap<Integer, Integer> countMap = new HashMap<>();
@@ -16,19 +18,22 @@ public class secondSolution {
 
         for (int num : countMap.keySet()) {
             if (countMap.get(num) > n / 2) {
+                // Collect all indices of the dominator
                 for (int i = 0; i < n; i++) {
                     if (A[i] == num) {
-                        return i; // Return any valid index
+                        indices.add(i);
                     }
                 }
+                return indices; // Return all indices of the dominator
             }
         }
 
-        return -1; // No dominator found
+        return indices; // Return an empty list if no dominator found
     }
 
     public static void main(String[] args) {
         int[] A = {3, 4, 3, 2, 3, -1, 3, 3};
-        System.out.println(findDominator(A)); // Output: 0, 2, 4, 6 or 7 (any valid index)
+        List<Integer> dominatorIndices = findDominator(A);
+        System.out.println(dominatorIndices); // Output: [0, 2, 4, 6, 7]
     }
 }
