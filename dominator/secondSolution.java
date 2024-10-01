@@ -1,8 +1,23 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 public class SecondSolution {
+
+    public static int[] getUserInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+        int[] A = new int[n];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            A[i] = scanner.nextInt();
+        }
+        
+        return A;
+    }
 
     public static List<Integer> findDominator(int[] A) {
         int n = A.length;
@@ -32,8 +47,13 @@ public class SecondSolution {
     }
 
     public static void main(String[] args) {
-        int[] A = {3, 4, 3, 2, 3, -1, 3, 3};
+        int[] A = getUserInput(); // Get user input for the array
         List<Integer> dominatorIndices = findDominator(A);
-        System.out.println(dominatorIndices); // Output: [0, 2, 4, 6, 7]
+        
+        if (dominatorIndices.isEmpty()) {
+            System.out.println(-1); // Output -1 if no dominator found
+        } else {
+            System.out.println(dominatorIndices); // Output indices of the dominator
+        }
     }
 }
